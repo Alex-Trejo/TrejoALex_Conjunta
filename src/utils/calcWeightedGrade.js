@@ -38,8 +38,8 @@ function calcWeightedGrade(items) {
         throw new RangeError('La suma de los weights debe ser 1 con tolerancia ±0.001');
     }
     return parseFloat(weightedScore.toFixed(2));
-}
+};
 
 
-module.exports = { calcWeightedGrade}
+module.exports = { calcWeightedGrade};
 
