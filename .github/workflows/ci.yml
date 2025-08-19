@@ -1,0 +1,42 @@
+# Configurar triggers
+# Nombre
+name: CI/CD Workflow
+# Triggers (disparadores)
+on:
+    push:
+        branches: [main] 
+    pull_request: 
+        branches: [main]
+#que va hacer se hace jobs
+jobs:
+    build-and-test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Clonar repositorio
+              uses: actions/checkout@v4
+
+            - name: Configurar Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '20'
+
+            
+            - name: Instalar dependencias
+              run: npm install
+            
+            - name: Ejecutar lint del codigo
+              run: npm run lint
+            
+            - name: Ejecutar pruebas
+              run: npx jest
+            
+            - name: Simular despliegue
+              run: |
+                echo "Despliegue simulado: La aplicacioón pasó lint y Pruebas correctamente"
+                
+              
+                
+
+            
+
+   

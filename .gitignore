@@ -1,0 +1,23 @@
+# Proyecto Node.js
+# Ignorar archivos de configuración de Node.js
+# Dependencias de Node.js
+node_modules/
+# Archivos de log
+npm-debug.log
+# Archivos de entorno
+.env
+# Archivos de caché
+.cache/
+# Archivos de lock
+#package-lock.json
+# Archivos de configuración de IDE
+.vscode/
+# Archivos de configuración de editor
+.idea/
+#prurbas de coverage
+coverage/
+#cualquuier log
+*.log
+#Data store
+.DS_Store
+
