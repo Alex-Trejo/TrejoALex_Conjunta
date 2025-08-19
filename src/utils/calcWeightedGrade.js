@@ -40,34 +40,6 @@ function calcWeightedGrade(items) {
     return parseFloat(weightedScore.toFixed(2));
 }
 
-// function percentile(p, values) {
-//   if (typeof p !== 'number' || p < 0 || p > 100) {
-//     throw new RangeError('p debe ser un número entre 0 y 100');
-//   }
-//     if (!Array.isArray(values) || values.length === 0) {
-//         throw new TypeError('values debe ser un arreglo no vacío');
-//     }
-//     for (const value of values) {
-//         if (typeof value !== 'number') {
-//             throw new TypeError('Cada valor en values debe ser un número');
-//         }
-//         if (isNaN(value)) {
-//             throw new TypeError('Los valores no pueden ser NaN');
-//         }
-//         if (value < 0) {
-//             throw new RangeError('Los valores deben ser mayores o iguales a 0');
-//         }   
-//     }
-//     values.sort((a, b) => a - b);
-//     const N = values.length;
-//     const rank = Math.ceil((p / 100) * N);
-//     if (rank < 1) {
-//         return parseFloat(values[0].toFixed(2)); // mínimo
-//     }   
-//     if (rank > N) {
-//         return parseFloat(values[N - 1].toFixed(2)); // máximo
-//     }   
-//     return parseFloat(values[rank - 1].toFixed(2)); // valor en el rango
-// }
-module.exports = { calcWeightedGrade, percentile };
+
+module.exports = { calcWeightedGrade};
 
