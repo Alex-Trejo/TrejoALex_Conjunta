@@ -41,5 +41,5 @@ function calcWeightedGrade(items) {
 }
 
 
-module.exports = { calcWeightedGrade};
+module.exports = { calcWeightedGrade}
 
